@@ -129,13 +129,14 @@
             }
 
             $(this).css({
-                "-webkit-transform": "translate3d(" + positionX + "%, " + positionY + "%, 0)",
+                // "-webkit-transform": "translate3d(" + positionX + "%, " + positionY + "%, 0)",
+                "top": positionY + "vh",
                 "-webkit-transition": "all " + options.time + "ms " + options.easing,
-                "-moz-transform": "translate3d(" + positionX + "%, " + positionY + "%, 0)",
+                "top": positionY + "vh",
                 "-moz-transition": "all " + options.time + "ms " + options.easing,
-                "-ms-transform": "translate3d(" + positionX + "%, " + positionY + "%, 0)",
+                "top": positionY + "vh",
                 "-ms-transition": "all " + options.time + "ms " + options.easing,
-                "transform": "translate3d(" + positionX + "%, " + positionY + "%, 0)",
+                "top": positionY + "vh",
                 "transition": "all " + options.time + "ms " + options.easing
             })
                 .one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {

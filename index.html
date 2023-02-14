@@ -16,55 +16,40 @@
 	<link rel="stylesheet" type="text/css" href="./css/custom.css">
 </head>
 <body class="noScroll">
-<div class=""></div>
 
 <header class="bg-purple-gradient">
 	<div class="container">
 		<div class="header-section row py-2 align-items-center justify-content-between">
 			<div class="head-logo col-md-3 col-6">
-				<!-- <a href="./" title="Logo"><img src="./images/vesttoo_log.png" width="150" alt="logo"></a>  -->
 				<a href="#" title="Logo" id="logo" class="text-decoration-none text-white fs-5"> H2 GROUP </a> 
 			</div>
 			<nav class="head-nav col-md-6 col-6">
-				<ul type="none" id="toggleMenu" class="d-flex justify-content-center">
+				<ul type="none" id="toggleMenu" class="d-flex justify-content-end">
 					<li><a href="./" class="nav-link active">Solutions</a></li>
-					
-			<div class="menu-container">
-				<div class="menu-icon">
-				
-			<li class="nav-link"><a href="" style="text-decoration: none;">Industries</a></li>
-				  <div class="menu-list">
-					<nav id="menu-nav">
-					  <a href="#services">Re/Insurance</a>
-					  <a href="#portfolio">Banking</a>
-					  <a href="#about">Capital Markets</a>
-					  <a href="#contact">Technology</a>
-					</nav>
-				  </div>
-				</div>
-			  </div>
-					<li><a href="#" class="nav-link">About Us</a></li>
-					<li><a href="./contact.html" class="nav-link">Contact Us</a></li>
+					<li><a href="#" class="nav-link">Industries <span class="material-icons"> expand_more </span></a>
+						<ul class="sub-menu">
+							<li><a href="#" class="sub-nav-link">Re/Insurance</a></li>
+							<li><a href="#" class="sub-nav-link">Banking</a></li>
+							<li><a href="#" class="sub-nav-link">Capital Markets</a></li>
+							<li><a href="#" class="sub-nav-link">Technology</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="nav-link">About</a></li>
+					<li><a href="./contact.html" class="nav-link">Contact</a></li>
 				</ul>
 			</nav>
-			<div class="book-meeting col-md-3 text-end">
+			<!-- <div class="book-meeting col-md-3 text-end">
 				<button type="button" class="btn btn-sm btn-outline-light btn-rounded">BOOK A MEETING</button>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </header>
-<ul class="page-control ">
-	<li class="page-control__item  ">01</li>
-	<li class="page-control__item">02</li>
-	<li class="page-control__item  ">03</li>
-	<li class="page-control__item">04</li>
-	<li class="page-control__item">05</li>
-	<li class="page-control__item">06</li>
-</ul>
+
+
 <main class="main">
-	<section class="pageScroll home-banner text-center bg-purple-gradient d-flex align-items-center justify-content-center">
+	<section class="pageScroll home-banner bg-purple-gradient d-flex align-items-center justify-content-center indicate-white">
 		<web-particles id="tsparticles" options='{"fps_limit":60,"interactivity":{"detectsOn":"canvas","events":{"onClick":{"enable":true,"mode":"push"},"onHover":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"push":{"particles_nb":4},"repulse":{"distance":100,"duration":0.4}}},"particles":{"color":{"value":"#ffffff"},"links":{"color":"#ffffff","distance":150,"enable":true,"opacity":0.4,"width":1},"move":{"bounce":false,"direction":"none","enable":true,"outMode":"out","random":false,"speed":1,"straight":false},"number":{"density":{"enable":true,"area":800},"value":80},"opacity":{"value":0.4},"shape":{"type":"circle"},"size":{"random":true,"value":5}},"detectRetina":true}'></web-particles>
-		<div class="banner-content text-white position-relative">
+		<div class="banner-content text-white position-relative container flex-grow-1">
 			<h1 class="pb-4 text-uppercase mavnor">Lorem ipsum dolor sit, <br>Amet consectetur adipisicing elit</h1>
 			<button type="button" class="btn btn-outline-light btn-rounded me-3">INSURANCE</button>
 			<button type="button" class="btn btn-outline-light btn-rounded">BOOK A MEETING</button>
@@ -75,14 +60,14 @@
 	</section>
 
 
-	<section class="pageScroll insurance-banner padd-plock">
+	<section class="pageScroll insurance-banner padd-plock indicate-white">
 		<div class="container">
 			<h2 class="mavreg text-uppercase lh-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit voluptates voluptatibus maiores soluta mollitia rerum deserunt labore saepe temporibus.</h2>
 			<button type="button" class="btn mt-4 btn-outline-light btn-rounded">BOOK A MEETING</button>
 		</div>
 	</section>
 
-	<section class="pageScroll connect-section padd-plock-sm">
+	<section class="pageScroll connect-section padd-plock-sm" style="background-color: #f9f8f7;">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-md-6 text-center">
@@ -132,81 +117,72 @@
 	</section>
 
 	<section class="pageScroll contact-section">
-	
-		
-		
-					
-				
+		<div class="container">
+			<div class="col-md-12">
+				<h4 class="title">Contact</h4>
+			</div>
 			
-				<div class="container">
-					<div class="col-md-12">
-						<h4 class="title">Contact</h4>
-					</div>
+			<div class="row ">
+				
+				<div class="col-lg-12 mt-lg-0">
 					
-					<div class="row ">
-						
-						<div class="col-lg-12 mt-lg-0">
+					<form action="forms/contact.php" method="post" role="form" class="php-email-form">
+						<div class="row">
+							<div class="col-md-6 form-group">
+								<input type="text" name="name" class="form-control" id="name" placeholder="First Name" required>
+							</div>
+							<div class="col-md-6 form-group">
+								<input type="text" name="name" class="form-control" id="name" placeholder="Last Name" required>
+							</div>
 							
-							<form action="forms/contact.php" method="post" role="form" class="php-email-form">
-								<div class="row">
-									<div class="col-md-6 form-group">
-										<input type="text" name="name" class="form-control" id="name" placeholder="First Name" required>
-									</div>
-									<div class="col-md-6 form-group">
-										<input type="text" name="name" class="form-control" id="name" placeholder="Last Name" required>
-									</div>
-									
-								</div>
-								<div class="row mt-2">
-									<div class="col-md-6 form-group mt-3 mt-md-0">
-										<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-									</div>
-									<div class="col-md-6 form-group">
-										<input type="number" name="name" class="form-control" id="name" placeholder="Phone Number" required>
-									</div>
-									
-								</div>
-								<div class="row mt-2">
-									<div class="col-md-6 form-group">
-										<input type="text" name="name" class="form-control" id="name" placeholder="Company Name" required>
-									</div>
-									<div class="col-md-6 form-group">
-										<input type="text" name="name" class="form-control" id="name" placeholder="Job Title" required>
-									</div>
-									
-								</div>
-								<div class="row mt-2">
-									<div class="col-md-6 form-group">
-										<input type="text" name="name" class="form-control" id="name" placeholder="Area of Work" required>
-									</div>
-									<div class="col-md-6 form-group">
-										<input type="text" name="name" class="form-control" id="name" placeholder="Area of Interest" required>
-									</div>
-									
-								</div>
-								<div class="row mt-2">
-									<div class="col-md-6 form-group">
-										<input type="text" name="name" class="form-control" id="name" placeholder="Country" required>
-									</div>
-									<div class="col-md-6 form-group">
-										<textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-									</div>
-									
-								</div>
-								
-								
-								<div class="text-center mt-4"><button type="submit" class="btn btn-primary btn-rounded">SEND MESSAGE</button></div>
-							</form>
 						</div>
-					</div>
+						<div class="row mt-2">
+							<div class="col-md-6 form-group mt-3 mt-md-0">
+								<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+							</div>
+							<div class="col-md-6 form-group">
+								<input type="number" name="name" class="form-control" id="name" placeholder="Phone Number" required>
+							</div>
+							
+						</div>
+						<div class="row mt-2">
+							<div class="col-md-6 form-group">
+								<input type="text" name="name" class="form-control" id="name" placeholder="Company Name" required>
+							</div>
+							<div class="col-md-6 form-group">
+								<input type="text" name="name" class="form-control" id="name" placeholder="Job Title" required>
+							</div>
+							
+						</div>
+						<div class="row mt-2">
+							<div class="col-md-6 form-group">
+								<input type="text" name="name" class="form-control" id="name" placeholder="Area of Work" required>
+							</div>
+							<div class="col-md-6 form-group">
+								<input type="text" name="name" class="form-control" id="name" placeholder="Area of Interest" required>
+							</div>
+							
+						</div>
+						<div class="row mt-2">
+							<div class="col-md-6 form-group">
+								<input type="text" name="name" class="form-control" id="name" placeholder="Country" required>
+							</div>
+							<div class="col-md-6 form-group">
+								<textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+							</div>
+							
+						</div>
+						
+						
+						<div class="text-center mt-4"><button type="submit" class="btn btn-primary btn-rounded">SEND MESSAGE</button></div>
+					</form>
 				</div>
-		
-		
-
+			</div>
+		</div>
 	</section>
 
-	<section>
-		<footer id="footer" class="bg-light">
+	<section class="bg-light">
+		<footer id="footer">
 			<div class="footer-top py-5 container">
 				<div class="row">
 					<div class="col-lg-3 col-md-6 footer-contact footer-links">
@@ -246,6 +222,16 @@
 			</div>
 		</footer>
 	</section>
+
+	<ul class="page-control ">
+		<li class="page-control__item">01</li>
+		<li class="page-control__item">02</li>
+		<li class="page-control__item">03</li>
+		<li class="page-control__item">04</li>
+		<li class="page-control__item">05</li>
+		<li class="page-control__item">06</li>
+	</ul>
+
 </main>
 
 
@@ -255,7 +241,6 @@
 
 <!-- <script src="./js/jquery-3.3.1.slim.min.js"></script> -->
 <!-- <script src="./js/jquery.min.js"></script> -->
-<script src="./js/parallax/parallax.min.js"></script>
 <script src="./js/tsparticles/tsparticles.min.js"></script>
 <script src="./js/tsparticles/tsparticles-custom-elements-es5-adapter.js"></script>
 <script src="./js/tsparticles/tsparticles-webcomponents-loader.js"></script>
@@ -265,9 +250,6 @@
 <script src="./js/pagescroll/UIPageScrolling.js"></script>
 
 <script>
-	// jQuery(window).trigger('resize').trigger('scroll');
-
-
 	$(function() {
 
 		$(".main").UIPageScrolling({
@@ -275,7 +257,17 @@
 			captureTouch: true
 
 		});
-	})
+	});
+
+	// $('main').on('wheel', function(){
+	// 	var topVal = $(this).css('top');
+	// 	console.log(topVal);
+	// 	if(topVal === '0px'){
+	// 		$('header').removeClass('bg-purple-gradient');
+	// 	}else{
+	// 		$('header').addClass('bg-purple-gradient');
+	// 	}
+	// })
 
 </script>
 
