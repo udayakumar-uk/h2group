@@ -23,7 +23,7 @@
     var defaults = {
         sections : "section",
         easing : "ease",
-        time : 1000,
+        time : 800,
         beforeMoveFunc : null,
         afterMoveFunc : null,
         isCyclic : false,
@@ -142,6 +142,27 @@
                 .one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
                     options.lockManager();
                     if (options.afterMoveFunc instanceof Function) options.afterMoveFunc(index);
+                    //scroll down button click function
+                    $('#pageDown').attr('data-index', index);
+                    var len = $('.main section').length - 1;
+                    $('#pageDown').click(function() {
+                        var scrollVal = $('#pageDown').attr('data-index');
+                        if(len != scrollVal){
+                            
+                            current.moveTo((+(scrollVal) + 1));
+                        }else{
+                            
+                        }
+                    });
+                    // show hide the scroll button
+                    index == len ?$('#pageDown').hide() :  $('#pageDown').show()
+                    // change header class
+                    var getIndex = $('#pageDown').attr('data-index');
+                    if(getIndex > 1){
+                        $('header').addClass('bg-light shadow-sm');
+                    }else{
+                        $('header').removeClass('bg-light shadow-sm');
+                    }
                 });
         }
 
@@ -246,6 +267,18 @@
 
         //Настройка переключателей (если есть)
         index = 0;
+        // create indicates from sectin
+        if(current.children().length > 0){
+            var getLength = current.children().length;
+            var indicate = '<ul class="page-control">'
+            for(var i=0; i<getLength; i++){
+                indicate += '<li class="page-control__item" data-index="'+i+'">0'+ (i+1) +'</li>';
+            }
+            indicate += '</ul>';
+            $('main').append(indicate);
+        }
+        $('.main').after('<button type="button" id="pageDown" class="btn btn-sm btn-light bg-green-shades text-white" data-index="1"><span class="material-icons"> arrow_downward </span></button>')
+
         if (options.sectionsControl) {
             $(options.sectionsControl)
                 .addClass("ui-page-scrolling-control").each(function () {

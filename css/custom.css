@@ -145,7 +145,7 @@ main.margin-top {
 }
 
 .btn-rounded.btn-primary:focus {
-	box-shadow: 0 0 0 0.25rem rgb(103 58 183 / 22%);
+	box-shadow: 0 0 0 0.25rem #17284826;
 }
 
 /*  */
@@ -158,6 +158,7 @@ main.margin-top {
 
 #tsparticles {
 	position: absolute;
+	top: 0px;
 	width: 100%;
 	height: 100%;
 	background-color: transparent;
@@ -168,8 +169,8 @@ main.margin-top {
 	z-index: 0;
 }
 
-.bg-purple-gradient {
-	background: linear-gradient(99.58deg, #5855e4 23.45%, #c11884 148.82%);
+.bg-green-shades {
+	background: linear-gradient(137deg, #0bc16d 23.45%, #09c3cd 148.82%);
 }
 
 header {
@@ -178,14 +179,18 @@ header {
 	right: 0;
 	top: 0px;
 	z-index: 99;
+	transition: all ease-in 0.3s;
 }
 
 header li > a{
     font-weight: 500;
 }
 /* Main */
-header nav > ul > li > a {
-    color: #fff !important;
+header nav > ul > li > a.nav-link {
+    color: #fff;
+}
+header nav > ul > li > a.nav-link:is(:hover, :focus), .sub-menu li a:hover{
+	color: #ffaa50;
 }
 
 header nav ul li{
@@ -202,6 +207,13 @@ header nav ul li .sub-menu{
     left: 50%;
     transform: translateX(-50%);
     padding-block: 5px;
+}
+header #logo{
+	color: var(--bs-white);
+}
+
+header.bg-light nav > ul > li > a, header.bg-light #logo{
+	color: var(--bs-primary);
 }
 
 .sub-menu::before {
@@ -222,11 +234,30 @@ header nav ul li .sub-menu{
 
 header nav ul li:hover > .sub-menu{
     display: block;
+	box-shadow: 0px 5px 20px -8px #00000070;
 }
 
-nav ul li a:hover {
-	color: #ffe636 !important;
+/* nav ul li:before {
+	position: absolute;
+	bottom: 0px;
+	height: 1px;
+	background-color: #fff;
+	content: '';
+	display: block;
+	clear: both;
+	width: 0;
+	transition: all linear 0.3s;
 }
+nav ul li ul li:before{
+	background-color: var(--bs-primary);
+} */
+
+
+nav ul li:hover:before{
+	width: 100%;
+}
+
+
 
 /* header end */
 
@@ -311,23 +342,24 @@ p {
 
 .contact .info,
 .php-email-form {
-	border-top: 3px solid var(--bs-primary);
-	border-bottom: 3px solid var(--bs-primary);
-	padding: 30px;
-	background: #fff;
-	width: 100%;
-	height: 100%;
+    border: 1px solid #ddd;
+    border-top: 3px solid var(--bs-primary);
+    border-bottom: 3px solid var(--bs-primary);
+    padding: 2rem;
+    background: #fff;
+    width: 100%;
+    height: 100%;
 	/* border-radius: 10px; */
 	/* box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1); */
 }
-
+.contact .form-group{
+	margin-bottom: 1rem;
+}
 .contact .php-email-form input,
 .contact .php-email-form textarea {
-	border-radius: 0;
 	box-shadow: none;
-	font-size: 14px;
-	border-radius: 4px;
-	min-height: 44px;
+	border-radius: 5px;
+	min-height: 40px;
 }
 
 .contact .php-email-form input:focus,
@@ -345,20 +377,17 @@ p {
 	height: 100vh;
 }
 
-.main section{
-    background-color: var(--bs-white);
-}
 
-
-
-.ui-page-scrolling-section {
+.main > section {
 	position: absolute;
 	width: 100%;
 	height: 100%;
+	background-color: var(--bs-white);
 	display: flex;
 	justify-content: center;
 	align-items: center;
     /* top: 0px !important; */
+	padding: 6rem 0 2rem;
     transition: all linear 0.5s;
 }
 
@@ -415,7 +444,15 @@ p {
 .ui-page-scrolling-section.ui-page-scrolling-section_active.indicate-white ~ .page-control .ui-page-scrolling-control_active::after {
 	background-color: var(--bs-white);
 }
-
+#pageDown{
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	z-index: 99;
+	height: 50px;
+	width: 50px;
+	border-radius: 50px;
+}
 
 
 /* footer */
@@ -438,74 +475,3 @@ footer .footer-links a:hover {
 
 /* end footer */
 
-
-/* .menu-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-}
-
-.menu-icon {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	justify-content: center;
-	align-items: flex-end;
-	cursor: pointer;
-}
-
-.line {
-	width: 30px;
-	height: 2px;
-	background-color: black;
-}
-
-.line2 {
-	width: 20px;
-	height: 2px;
-	background-color: black;
-	margin: 5px 0;
-	transition-duration: 0.5s;
-}
-
-.menu-icon:hover .line2 {
-	width: 30px;
-}
-
-#menu-nav {
-	display: none;
-}
-
-#menu-nav::before {
-	content: '';
-	position: absolute;
-	top: -20px;
-	right: 90px;
-	border: 10px solid transparent;
-	border-bottom: 10px solid white;
-}
-
-.menu-icon:hover #menu-nav {
-	background-color: white;
-	position: absolute;
-	top: 100%;
-	right: -50px;
-	width: 200px;
-	display: grid;
-	border-radius: 10px;
-	align-content: center;
-}
-
-.menu-list a {
-	padding: 10px;
-	text-decoration: none;
-	color: black;
-	border-bottom: 1px solid #ececec;
-	font-size: 0.95rem;
-	font-weight: normal;
-}
-
-.menu-list a:nth-child(4) {
-	border-bottom: none;
-} */
