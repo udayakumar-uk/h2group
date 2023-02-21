@@ -148,10 +148,7 @@
                     $('#pageDown').click(function() {
                         var scrollVal = $('#pageDown').attr('data-index');
                         if(len != scrollVal){
-                            
                             current.moveTo((+(scrollVal) + 1));
-                        }else{
-                            
                         }
                     });
                     // show hide the scroll button
@@ -277,7 +274,15 @@
             indicate += '</ul>';
             $('main').append(indicate);
         }
-        $('.main').after('<button type="button" id="pageDown" class="btn btn-sm btn-light bg-green-shades text-white" data-index="1"><span class="material-icons"> arrow_downward </span></button>')
+        $('.main').after('<button type="button" id="pageDown" class="btn btn-sm btn-light bg-green-shades text-white" data-index="0"><span class="material-icons"> arrow_downward </span></button>')
+        // it will be triggerd as one time only
+        $('#pageDown').one('click', function() {
+            var len = $('.main section').length - 1;
+            var scrollVal = $('#pageDown').attr('data-index');
+            if(len != scrollVal){
+                current.moveTo((+(scrollVal) + 1));
+            }
+        });
 
         if (options.sectionsControl) {
             $(options.sectionsControl)
