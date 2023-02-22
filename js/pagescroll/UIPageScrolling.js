@@ -156,9 +156,9 @@
                     // change header class
                     var getIndex = $('#pageDown').attr('data-index');
                     if(getIndex > 1){
-                        $('header').addClass('bg-light shadow-sm');
+                        // $('header').addClass('bg-light shadow-sm');
                     }else{
-                        $('header').removeClass('bg-light shadow-sm');
+                        // $('header').removeClass('bg-light shadow-sm');
                     }
                 });
         }
@@ -274,7 +274,7 @@
             indicate += '</ul>';
             $('main').append(indicate);
         }
-        $('.main').after('<button type="button" id="pageDown" class="btn btn-sm btn-light bg-green-shades text-white" data-index="0"><span class="material-icons"> arrow_downward </span></button>')
+        $('.main').after('<button type="button" id="pageDown" class="btn btn-sm btn-light bg-green-shades text-white" data-index="0"><span class="material-symbols-rounded"> arrow_downward </span></button>')
         // it will be triggerd as one time only
         $('#pageDown').one('click', function() {
             var len = $('.main section').length - 1;

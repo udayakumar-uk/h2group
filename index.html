@@ -6,45 +6,17 @@
 	<title>H2 Group</title>
 	<!-- <link rel="icon" type="image/x-icon" href="./images/favicon.png"> -->
 	<!-- Google Material -->
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;800&display=swap" rel="stylesheet">
 	<!-- end -->
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="stylesheet" type="text/css" href="./css/custom.css">
 </head>
 <body class="noScroll">
-
-<header>
-	<div class="container">
-		<div class="header-section row py-2 align-items-center">
-			<div class="head-logo col-md-3 col-6">
-				<a href="./" title="Logo" id="logo" class="text-decoration-none fs-5"> H2 GROUP </a> 
-			</div>
-			<nav class="head-nav col-md-6 col-6">
-				<ul type="none" id="toggleMenu" class="d-flex justify-content-center">
-					<li><a href="./" class="nav-link active">Solutions</a></li>
-					<li><a href="#" class="nav-link">Industries <span class="material-icons"> expand_more </span></a>
-						<ul class="sub-menu">
-							<li><a href="#" class="sub-nav-link">Re/Insurance</a></li>
-							<li><a href="#" class="sub-nav-link">Banking</a></li>
-							<li><a href="#" class="sub-nav-link">Capital Markets</a></li>
-							<li><a href="#" class="sub-nav-link">Technology</a></li>
-						</ul>
-					</li>
-					<li><a href="#" class="nav-link">About</a></li>
-					<li><a href="./contact.html" class="nav-link">Contact</a></li>
-				</ul>
-			</nav>
-			<!-- <div class="book-meeting col-md-3 text-end">
-				<button type="button" class="btn btn-sm btn-outline-light btn-rounded">BOOK A MEETING</button>
-			</div> -->
-		</div>
-	</div>
-</header>
-
 
 <main class="main">
 	<section class="pageScroll home-banner bg-green-shades indicate-white">
@@ -58,7 +30,6 @@
 			<img src="./images/wave-bg.png" alt="wave">
 		</div>
 	</section>
-
 
 	<section class="pageScroll insurance-banner indicate-white">
 		<div class="container">
@@ -115,49 +86,7 @@
 			</div>
 		</div>
 	</section>
-
-	<section class="pageScroll bg-light footer-section align-items-end">
-		<footer id="footer">
-			<div class="footer-top container">
-				<div class="row">
-					<div class="col-lg-3 col-md-6 footer-contact footer-links">
-						<h4>Company Name</h4>
-						<p> A108 Adam Street <br> New York, NY 535022<br> United States <br><br>
-							<strong>Phone:</strong> +1 5589 55488 55<br>
-							<strong>Email:</strong> info@example.com<br>
-						</p>
-					</div>
-					<div class="col-lg-3 col-md-6 footer-links">
-						<h4>Useful Links</h4>
-						<ul>
-							<li> <a href="#">Home</a></li>
-							<li> <a href="#">About us</a></li>
-							<li> <a href="#">Services</a></li>
-							<li> <a href="#">Terms of service</a></li>
-							<li> <a href="#">Privacy policy</a></li>
-						</ul>
-					</div>
-			
-					<div class="col-lg-3 col-md-6 footer-links">
-						<h4>Our Services</h4>
-						<ul>
-							<li> <a href="#">Web Design</a></li>
-							<li> <a href="#">Web Development</a></li>
-							<li> <a href="#">Product Management</a></li>
-							<li> <a href="#">Marketing</a></li>
-							<li> <a href="#">Graphic Design</a></li>
-						</ul>
-					</div>
-			
-					<div class="col-lg-3 col-md-6 footer-links">
-						<h4>Our Networks</h4>
-						<p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
-					</div>
-				</div>
-			</div>
-		</footer>
-	</section>
-	<!-- End Footer -->
+	
 </main>
 
 	
@@ -168,6 +97,8 @@
 
 <script src="./js/pagescroll/jquery2.0.min.js"></script>
 <script src="./js/pagescroll/UIPageScrolling.js"></script>
+
+<script src="./js/index.js"></script>
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
@@ -190,16 +121,6 @@
 //   showLines: false
 // })
 </script>
-
-<script>
-	$(function() {
-		$(".main").UIPageScrolling({
-			sectionsControl:".page-control__item",
-			captureTouch: false
-		});
-	});
-</script>
-
 
 
 </body>

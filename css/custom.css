@@ -10,7 +10,7 @@
 	font-weight: 800;
 }
 
-.mavbold {
+.mavbold, b, strong {
 	font-weight: 700;
 }
 
@@ -34,7 +34,7 @@ html {
 	letter-spacing: initial;
 	padding: 0px;
 	margin: 0px;
-	line-height: 1.7;
+	line-height: 1.5;
 	font-size: 14px;
 	color: #333;
 	scroll-behavior: smooth;
@@ -110,7 +110,7 @@ main.margin-top {
 	margin-top: 6rem;
 }
 
-.material-icons{
+.material-symbols-rounded{
     line-height: normal;
     vertical-align: middle;
     font-size: 22px;
@@ -263,9 +263,16 @@ nav ul li:hover:before{
 
 
 .title {
-	font-size: 30px;
+	font-size: 28px;
 	font-weight: 500;
 	text-transform: uppercase;
+	color: var(--bs-primary);
+}
+
+
+.subtitle {
+	font-size: 24px;
+	font-weight: 600;
 	color: var(--bs-primary);
 }
 
@@ -306,7 +313,7 @@ p {
 }
 
 /* contact */
-.contact .info .material-icons-outlined {
+.contact .info .material-symbols-rounded {
 	font-size: 20px;
 	color: var(--bs-primary);
 	float: left;
@@ -320,7 +327,7 @@ p {
 	transition: all 0.3s ease-in-out;
 }
 
-.contact .info :is(.email:hover, .address:hover, .phone:hover) .material-icons-outlined {
+.contact .info :is(.email:hover, .address:hover, .phone:hover) .material-symbols-rounded {
 	background: var(--bs-primary);
 	color: #fff;
 }
@@ -453,6 +460,133 @@ p {
 	width: 50px;
 	border-radius: 50px;
 }
+
+
+
+/* about us page */
+
+  
+.about-section .content ul li:not(:last-child), .banking-section .content ul li:not(:last-child){
+	padding-bottom: 10px;
+}
+  
+.about-section .content ul li .material-symbols-rounded, .banking-section .content ul li .material-symbols-rounded {
+	padding-right: 4px;
+	color: var(--bs-teal);
+}
+  
+.counts .count-box {
+	box-shadow: -20px 10px 30px 4px rgb(0 0 0 / 10%);
+	padding: 2rem;
+}
+
+.counts .count-box .material-symbols-rounded {
+	display: block;
+	font-size: 40px;
+	color: var(--bs-teal);
+	float: left;
+}
+
+.counts .count-box .purecounter {
+	font-size: 42px;
+	line-height: normal;
+	display: block;
+	font-weight: 700;
+	color: #555555;
+	margin-left: 100px;
+}
+
+.counts .count-box p {
+	padding: 1.4rem 0 0;
+}
+
+.counts .count-box a {
+	font-weight: 600;
+	display: block;
+	color: #7b7b7b;
+	font-size: 15px;
+	transition: ease-in-out 0.3s;
+}
+
+.counts .count-box a:hover {
+	color: var(--bs-teal);
+}
+
+/* end about us page */
+
+
+
+/* capitalmarket */
+
+
+
+.services .icon-box {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.services .icon {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+	margin-bottom: 1rem;
+	background: #fff;
+	border-radius: 50%;
+	transition: 0.5s;
+	color: #3fbbc0;
+	box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.services .icon-box:hover .icon {
+	box-shadow: 0px 0 25px rgba(63, 187, 192, 0.3);
+}
+
+.services .subtitle {
+	margin-bottom: 10px;
+	font-size: 18px;
+	position: relative;
+	padding-bottom: 10px;
+}
+
+.services .subtitle::after {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 2px;
+	background: var(--bs-teal);
+	bottom: 0;
+	left: calc(50% - 25px);
+}
+  
+  
+  /* end */
+
+
+/* tecnology */
+
+
+
+
+
+.features .icon-box .subtitle {
+	font-size: 20px;
+	margin: 5px 0 10px 60px;
+}
+
+.features .icon-box span {
+	font-size: 40px;
+	float: left;
+	color: var(--bs-teal);
+}
+
+.features .icon-box p {
+	margin-left: 60px;
+}
+
+
 
 
 /* footer */
