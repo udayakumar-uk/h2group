@@ -1,5 +1,5 @@
 var header = function(){
-    var pageHeader = `<header class="bg-green-shades">
+    var pageHeader = `<header>
                         <div class="container">
                             <div class="header-section row py-2 align-items-center">
                                 <div class="head-logo col-md-3 col-6">
@@ -29,7 +29,12 @@ var header = function(){
 
 
 var fooder = function(){
-    var pageFooter = `<section class="pageScroll bg-light footer-section align-items-end">
+    var pageFooter = `<section class="pageScroll footer-section indicate-white flex-column align-items-center justify-content-around gap-5">
+                        <div class="mail-section text-center">
+                            <h3 class="title fs-1 text-white">STAY UP TO DATE</h3>
+                            <p class="fs-5">Sign up for news and updates</p>
+                            <button class="btn btn-light btn-rounded">SIGN UP</button>
+                        </div>
                         <footer id="footer">
                             <div class="footer-top container">
                                 <div class="row">
@@ -82,3 +87,7 @@ $(function() {
         captureTouch: false
     });
 });
+
+if(!$('body').hasClass('home-page')){
+    $('header').addClass('bg-light');
+}

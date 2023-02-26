@@ -306,6 +306,17 @@ p {
 	display: none;
 }
 
+.main .home-banner{
+	background: linear-gradient(137deg, #0bc16d 23.45%, #09c3cd 148.82%);
+}
+.main .procas-section{
+	background: linear-gradient(137deg, #19c5ba 23.45%, #108fc2 148.82%);
+}
+
+/* .home-main > section{
+	background-color: transparent !important;
+} */
+
 .insurance-banner {
 	background: linear-gradient(121deg, #2a044691 0%, #1028585e 100%), url('../images/insurance.png') no-repeat center;
 	background-size: cover;
@@ -590,6 +601,18 @@ p {
 
 
 /* footer */
+.footer-section{
+	background: linear-gradient(177deg, rgb(13, 187, 220) 0%, rgb(10, 141, 248) 140%);
+}
+
+.footer-section h4{
+	color: #fff !important;
+}
+.footer-section :is(p, a){
+	color: #ededed !important;
+}
+
+
 footer .footer-links a {
 	text-decoration: none;
 	padding: 3px;
